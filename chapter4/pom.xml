@@ -12,13 +12,11 @@
     <artifactId>chapter4</artifactId>
 
     <dependencies>
-<!--
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aspects</artifactId>
             <version>4.3.2.RELEASE</version>
         </dependency>
--->
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjrt</artifactId>
