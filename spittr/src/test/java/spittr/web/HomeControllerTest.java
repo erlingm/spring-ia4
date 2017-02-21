@@ -1,4 +1,4 @@
-package spitter.web;
+package spittr.web;
 
 import org.junit.Test;
 import org.springframework.test.web.servlet.MockMvc;
