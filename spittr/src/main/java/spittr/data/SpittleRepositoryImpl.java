@@ -21,11 +21,10 @@ public class SpittleRepositoryImpl implements SpittleRepository {
     public List<Spittle> findSpittles(long max, int count) {
         if (spittles == null)
             spittles = IntStream.rangeClosed(1, count).mapToObj(i -> new Spittle("Spittle " + i, new Date())).collect(Collectors.toList());
-        else if (spittles.size() < count) {
+        else if (spittles.size() < count)
             IntStream.rangeClosed(spittles.size() + 1, count).forEach(i -> spittles.add(new Spittle("Spittle " + i, new Date())));
-        } else {
-            return new ArrayList<>(spittles.subList(0, count - 1));
-        }
+        else if (count < spittles.size())
+            return new ArrayList<>(spittles.subList(0, count));
         return spittles;
     }
 }
