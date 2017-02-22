@@ -1,5 +1,6 @@
 package spittr.web;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.web.servlet.view.InternalResourceView;
 import spittr.Spittle;

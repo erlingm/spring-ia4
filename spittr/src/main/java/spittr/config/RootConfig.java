@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
  * Created by Erling Molde on 21.02.2017.
  */
 @Configuration
-@ComponentScan(basePackages = {"spitter"}, excludeFilters = {
+@ComponentScan(basePackages = {"spittr"}, excludeFilters = {
         @Filter(type = FilterType.ANNOTATION, value = EnableWebMvc.class)
 })
 public class RootConfig {
