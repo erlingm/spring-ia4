@@ -14,13 +14,14 @@ public class Spittle {
     private final Date time;
     private Double latitude;
     private Double longitude;
+    private static long nextId = 1L;
 
     public Spittle(String message, Date time) {
         this(message, time, null, null);
     }
 
     public Spittle(String message, Date time, Double latitude, Double longitude) {
-        this.id = null;
+        this.id = nextId++;
         this.message = message;
         this.time = time;
         this.latitude = latitude;

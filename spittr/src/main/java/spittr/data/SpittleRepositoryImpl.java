@@ -27,4 +27,16 @@ public class SpittleRepositoryImpl implements SpittleRepository {
             return new ArrayList<>(spittles.subList(0, count));
         return spittles;
     }
+
+    @Override
+    public Spittle findOne(long spittleId) {
+        if (spittles == null)
+            return null;
+        return spittles.stream()
+                .filter(s -> s.getId() != null && s.getId() == spittleId)
+                .findFirst()
+                .orElse(spittles.stream()
+                        .findFirst()
+                        .orElse(null));
+    }
 }
